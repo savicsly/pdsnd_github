@@ -32,7 +32,7 @@ def get_filters():
 
     while True:
       month = input("\nWhich month would you like to filter by? January, February, March, April, May, June or type 'all' if you do not have any preference?\n")
-      if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'all'):
+      if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'All'):
         print("Sorry, something went wrong. Please try again.")
         continue
       else:
@@ -42,7 +42,7 @@ def get_filters():
 
     while True:
       day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n")
-      if day not in ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'all'):
+      if day not in ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'All'):
         print("Sorry, something went wrong. Please try again.")
         continue
       else:
@@ -178,7 +178,6 @@ def user_stats(df):
     # TO DO: Display counts of user types
 
     user_types = df['User Type'].value_counts()
-    #print(user_types)
     print('User Types:\n', user_types)
 
     # TO DO: Display counts of gender
