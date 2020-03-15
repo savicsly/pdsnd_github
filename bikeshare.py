@@ -23,7 +23,7 @@ def get_filters():
     while True:
       city = input("\nWhich city would you like to filter by? New York City, Chicago or Washington?\n")
       if city not in ('New York City', 'Chicago', 'Washington'):
-        print("Sorry, I didn't get that. Please try again.")
+        print("Sorry, something went wrong. Please try again.")
         continue
       else:
         break
@@ -32,8 +32,8 @@ def get_filters():
 
     while True:
       month = input("\nWhich month would you like to filter by? January, February, March, April, May, June or type 'all' if you do not have any preference?\n")
-      if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'all'):
-        print("Sorry, I didn't get that. Please try again.")
+      if month not in ('January', 'February', 'March', 'April', 'May', 'June', 'All'):
+        print("Sorry, something went wrong. Please try again.")
         continue
       else:
         break
@@ -42,8 +42,8 @@ def get_filters():
 
     while True:
       day = input("\nAre you looking for a particular day? If so, kindly enter the day as follows: Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday or type 'all' if you do not have any preference.\n")
-      if day not in ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'all'):
-        print("Sorry, I didn't get that. Please try again.")
+      if day not in ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'All'):
+        print("Sorry, something went wrong. Please try again.")
         continue
       else:
         break
@@ -106,7 +106,6 @@ def time_stats(df):
 
     popular_day = df['day_of_week'].mode()[0]
     print('Most Common day:', popular_day)
-
 
 
     # TO DO: display the most common start hour
@@ -179,7 +178,6 @@ def user_stats(df):
     # TO DO: Display counts of user types
 
     user_types = df['User Type'].value_counts()
-    #print(user_types)
     print('User Types:\n', user_types)
 
     # TO DO: Display counts of gender
